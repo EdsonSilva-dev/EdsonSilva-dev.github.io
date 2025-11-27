@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Docs Layout Example</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind config (optional aesthetic tweaks) -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2563eb",
+              secondary: "#1d4ed8",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="font-sans text-gray-800 antialiased bg-gray-50">
+    <!-- ===== Layout Wrapper ===== -->
+    <div class="min-h-screen flex flex-col lg:flex-row">
+      <!-- ===== Sidebar (visible on lg+) ===== -->
+      <aside
+        class="lg:w-64 bg-white border-b lg:border-b-0 lg:border-r border-gray-200 sticky top-0 h-auto lg:h-screen p-6"
+      >
+        <h2 class="text-xl font-bold text-primary mb-6">Docs</h2>
+        <nav class="space-y-3">
+          <a
+            href="#introduction"
+            class="block text-gray-700 hover:text-primary focus:text-primary transition"
+            >Introduction</a
+          >
+          <a
+            href="#installation"
+            class="block text-gray-700 hover:text-primary focus:text-primary transition"
+            >Installation</a
+          >
+          <a
+            href="#usage"
+            class="block text-gray-700 hover:text-primary focus:text-primary transition"
+            >Usage</a
+          >
+          <a
+            href="#components"
+            class="block text-gray-700 hover:text-primary focus:text-primary transition"
+            >Components</a
+          >
+          <a
+            href="#api"
+            class="block text-gray-700 hover:text-primary focus:text-primary transition"
+            >API Reference</a
+          >
+        </nav>
+      </aside>
+
+      <!-- ===== Main Content ===== -->
+      <main class="flex-1 px-6 py-10 lg:py-16">
+        <div class="max-w-prose mx-auto">
+          <!-- Edit on GitHub Button -->
+          <div class="flex justify-end mb-8">
+            <a
+              href="https://github.com/your-repo/docs"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 bg-primary text-white text-sm font-medium px-4 py-2 rounded-lg shadow hover:bg-secondary focus:ring-4 focus:ring-blue-200 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12a12 12 0 008.207 11.386c.6.113.793-.261.793-.579v-2.014c-3.338.726-4.043-1.416-4.043-1.416-.547-1.391-1.336-1.762-1.336-1.762-1.09-.744.083-.729.083-.729 1.205.084 1.84 1.238 1.84 1.238 1.07 1.832 2.809 1.303 3.493.997.108-.776.42-1.303.763-1.603-2.665-.303-5.467-1.337-5.467-5.945 0-1.313.469-2.384 1.238-3.223-.124-.303-.537-1.524.118-3.176 0 0 1.01-.323 3.307 1.23a11.44 11.44 0 016.021 0c2.297-1.553 3.305-1.23 3.305-1.23.657 1.652.245 2.873.12 3.176.771.839 1.236 1.91 1.236 3.223 0 4.62-2.807 5.638-5.48 5.935.432.372.816 1.103.816 2.223v3.293c0 .32.191.696.801.577A12.003 12.003 0 0024 12c0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+              Edit on GitHub
+            </a>
+          </div>
+
+          <!-- ===== Example Content ===== -->
+          <section id="introduction" class="mb-12">
+            <h1 class="text-3xl font-bold mb-4">Introduction</h1>
+            <p class="mb-4">
+              Welcome to the documentation for our project. This guide will help
+              you understand how to install, configure, and use all available
+              features effectively.
+            </p>
+            <p>
+              Whether you're a beginner or advanced user, you’ll find detailed
+              explanations, examples, and best practices for every major
+              component.
+            </p>
+          </section>
+
+          <section id="installation" class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Installation</h2>
+            <p class="mb-4">
+              You can install the package via npm, yarn, or by directly
+              including it via CDN:
+            </p>
+            <pre
+              class="bg-gray-800 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto"
+            ><code>npm install your-package-name</code></pre>
+          </section>
+
+          <section id="usage" class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Usage</h2>
+            <p class="mb-4">
+              After installation, import the library into your project and
+              initialize it:
+            </p>
+            <pre
+              class="bg-gray-800 text-gray-100 p-4 rounded-lg text-sm overflow-x-auto"
+            ><code>import { Component } from 'your-package-name'
+
+Component.init()</code></pre>
+          </section>
+
+          <section id="components" class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">Components</h2>
+            <p class="mb-4">
+              The library offers multiple reusable UI components that are
+              flexible and customizable.
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Button</li>
+              <li>Modal</li>
+              <li>Tabs</li>
+              <li>Accordion</li>
+            </ul>
+          </section>
+
+          <section id="api" class="mb-12">
+            <h2 class="text-2xl font-semibold mb-4">API Reference</h2>
+            <p>
+              Each component exposes an API that allows you to configure and
+              extend its behavior programmatically.
+            </p>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

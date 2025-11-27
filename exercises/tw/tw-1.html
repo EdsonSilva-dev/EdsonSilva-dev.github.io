@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Six Soccer Players</title>
+    <meta name="description" content="The world's top Six Soccer Players">
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-sans text-gray-900">
+    <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
+<nav class="relative bg-gray-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" command="--toggle" commandfor="mobile-menu" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+          <span class="absolute -inset-0.5"></span>
+          <span class="sr-only">Open main menu</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 in-aria-expanded:hidden">
+            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
+            <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="flex shrink-0 items-center">
+          <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" class="h-8 w-auto" />
+        </div>
+        <div class="hidden sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+            <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+            <a href="#" aria-current="page" class="rounded-md bg-gray-950/50 px-3 py-2 text-sm font-medium text-white">Dashboard</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Team</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Projects</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">Calendar</a>
+          </div>
+        </div>
+      </div>
+      <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+        <button type="button" class="relative rounded-full p-1 text-gray-400 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-indigo-500">
+          <span class="absolute -inset-1.5"></span>
+          <span class="sr-only">View notifications</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+            <path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <!-- Profile dropdown -->
+        <el-dropdown class="relative ml-3">
+          <button class="relative flex rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+            <span class="absolute -inset-1.5"></span>
+            <span class="sr-only">Open user menu</span>
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-8 rounded-full bg-gray-800 outline -outline-offset-1 outline-white/10" />
+          </button>
+
+          <el-menu anchor="bottom end" popover class="w-48 origin-top-right rounded-md bg-gray-800 py-1 outline -outline-offset-1 outline-white/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:outline-hidden">Your profile</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:outline-hidden">Settings</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-300 focus:bg-white/5 focus:outline-hidden">Sign out</a>
+          </el-menu>
+        </el-dropdown>
+      </div>
+    </div>
+  </div>
+
+  <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
+    <div class="space-y-1 px-2 pt-2 pb-3">
+      <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
+      <a href="#" aria-current="page" class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white">Dashboard</a>
+      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Team</a>
+      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Projects</a>
+      <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white">Calendar</a>
+    </div>
+  </el-disclosure>
+</nav>
+
+    <!-- Hero Block -->
+    <header
+      class="flex flex-col justify-center items-center text-center px-[20%] py-[4%] min-h-[80vh] bg-gradient-to-r from-[#07092f] to-[#165cc0]"
+    >
+      <div class="hero-text-container">
+        <h1
+          class="slide-in-top text-white text-[clamp(3.05rem,3.54vi+2.17rem,5rem)] tracking-tight mb-6 font-black"
+        >
+          Greatest Soccer Players
+        </h1>
+        <h2
+          class="slide-in-left text-white text-[clamp(1.95rem,1.56vi+1.56rem,2.81rem)] uppercase font-normal"
+        >
+          The Best Six of the World
+        </h2>
+      </div>
+    </header>
+  </body>
+
+    <!-- Section Container -->
+    <section class="bg-gray-50 pt-8 pb-10 px-6 md:pt-10 md:pb-12 md:px-28 lg:pt-12 lg:pb-14 lg:px-48 xl:pt-14 xl:pb-16 xl:px-72">
+        <!-- Section background and responsive padding -->
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Responsive grid layout: 1 column mobile, 2 columns tablet, 3 columns desktop -->
+
+            <!-- Player 1: Lionel Messi -->
+            <div class="bg-sky-100 p-6 rounded-lg">
+                <!-- Light background color for player card -->
+
+                <h2 class="text-black font-sans font-semibold tracking-tighter text-4xl md:text-5xl lg:text-6xl xl:text-7xl 
+                           leading-tight md:leading-snug lg:leading-none xl:leading-none mb-4 lg:mb-6 xl:mb-8">
+                    <!-- Typography for h2 with responsive margins -->
+                    Lionel Messi
+                </h2>
+
+                <img src="https://placehold.co/600x300" alt="Lionel Messi" class="mb-6 lg:mb-8">
+                <!-- Placeholder image with responsive bottom margin -->
+
+                <p class="text-gray-800 font-serif font-normal leading-relaxed text-lg lg:text-2xl 
+                          lg:leading-loose xl:leading-10 mb-6 lg:mb-8">
+                    <!-- Paragraph typography and spacing -->
+                    Lionel Messi, an Argentine footballer, is widely regarded as one of the best players ever. 
+                    Known for his dribbling, vision, and creativity, he has broken multiple records. 
+                    Learn more on 
+                    <a href="https://en.wikipedia.org/wiki/Lionel_Messi" 
+                       class="font-normal underline text-blue-600 decoration-blue-600 decoration-2 underline-offset-4 
+                              hover:text-red-800 hover:no-underline">Wikipedia</a>.
+                </p>
+
+                <p class="text-gray-800 font-serif font-normal leading-relaxed text-lg lg:text-2xl 
+                          lg:leading-loose xl:leading-10 mb-0">
+                    <!-- Final paragraph with no bottom margin -->
+                    Messi has earned numerous Ballon d'Or awards and continues to inspire generations with his 
+                    incredible consistency, humility, and talent. His achievements have redefined football history. 
+                    Discover more on 
+                    <a href="https://en.wikipedia.org/wiki/Lionel_Messi" 
+                       class="font-normal underline text-blue-600 decoration-blue-600 decoration-2 underline-offset-4 
+                              hover:text-red-800 hover:no-underline">Wikipedia</a>.
+                </p>
+
+            </div>
+
+
+            <!-- Player 2: Cristiano Ronaldo -->
+            <div class="bg-rose-100 p-6 rounded-lg">
+
+                <h2 class="text-black font-sans font-semibold tracking-tighter text-4xl md:text-5xl lg:text-6xl xl:text-7xl 
+                           leading-tight md:leading-snug lg:leading-none xl:leading-none mb-4 lg:mb-6 xl:mb-8">
+                    Cristiano Ronaldo
+                </h2>
+
+                <img src="https://placehold.co/600x300" alt="Cristiano Ronaldo" class="mb-6 lg:mb-8">
+
+                <p class="text-gray-800 font-serif font-normal leading-relaxed text-lg lg:text-2xl 
+                          lg:leading-loose xl:leading-10 mb-6 lg:mb-8">
+                    Cristiano Ronaldo, from Portugal, is renowned for his athleticism, precision, and goal-scoring ability. 
+                    He has represented Manchester United, Real Madrid, Juventus, and Al-Nassr. 
+                    Learn more on 
+                    <a href="https://en.wikipedia.org/wiki/Cristiano_Ronaldo" 
+                       class="font-normal underline text-blue-600 decoration-blue-600 decoration-2 underline-offset-4 
+                              hover:text-red-800 hover:no-underline">Wikipedia</a>.
+                </p>
+
+                <p class="text-gray-800 font-serif font-normal leading-relaxed text-lg lg:text-2xl 
+                          lg:leading-loose xl:leading-10 mb-0">
+                    Ronaldo’s unmatched work ethic and consistency have kept him among football’s elite for over a decade. 
+                    His legacy as a leader and global icon continues to grow. 
+                    More on 
+                    <a href="https://en.wikipedia.org/wiki/Cristiano_Ronaldo" 
+                       class="font-normal underline text-blue-600 decoration-blue-600 decoration-2 underline-offset-4 
+                              hover:text-red-800 hover:no-underline">Wikipedia</a>.
+                </p>
+
+            </div>
+
+
+            <!-- Player 3: Neymar Jr -->
+            <div class="bg-lime-100 p-6 rounded-lg">
+
+                <h2 class="text-black font-sans font-semibold tracking-tighter text-4xl md:text-5xl lg:text-6xl xl:text-7xl 
+                           leading-tight md:leading-snug lg:leading-none xl:leading-none mb-4 lg:mb-6 xl:mb-8">
+                    Neymar Jr
+                </h2>
+
+                <img src="https://placehold.co/600x300" alt="Neymar Jr" class="mb-6 lg:mb-8">
+
+                <p class="text-gray-800 font-serif font-normal leading-relaxed text-lg lg:text-2xl 
+                          lg:leading-loose xl:leading-10 mb-6 lg:mb-8">
+                    Neymar Jr, from Brazil, is known for his creativity, flair, and dribbling artistry. 
+                    Having played for Santos, Barcelona, and PSG, he remains one of the world’s most talented forwards. 
+                    Learn more on 
+                    <a href="https://en.wikipedia.org/wiki/Neymar" 
+                       class="font-normal underline text-blue-600 decoration-blue-600 decoration-2 underline-offset-4 
+                              hover:text-red-800 hover:no-underline">Wikipedia</a>.
+                </p>
+
+                <p class="text-gray-800 font-serif font-normal leading-relaxed text-lg lg:text-2xl 
+                          lg:leading-loose xl:leading-10 mb-0">
+                    His quick footwork, charisma, and skillful play make him an influential figure in global football culture. 
+                    See more on 
+                    <a href="https://en.wikipedia.org/wiki/Neymar" 
+                       class="font-normal underline text-blue-600 decoration-blue-600 decoration-2 underline-offset-4 
+                              hover:text-red-800 hover:no-underline">Wikipedia</a>.
+                </p>
+
+            </div>
+
+
+            <!-- Player 4: Kylian Mbappé -->
+            <div class="bg-amber-100 p-6 rounded-lg">
+
+                <h2 class="text-black font-sans font-semibold tracking-tighter text-4xl md:text-5xl lg:text-6xl xl:text-7xl 
+                           leading-tight md:leading-snug lg:leading-none xl:leading-none mb-4 lg:mb-6 xl:mb-8">
+                    Kylian Mbappé
+                </h2>
+
+                <img src="https://placehold.co/600x300" alt="Kylian Mbappé" class="mb-6 lg:mb-8">
+
+                <p class="text-gray-800 font-serif font-normal leading-relaxed text-lg lg:text-2xl 
+                          lg:leading-loose xl:leading-10 mb-6 lg:mb-8">
+                    Kylian Mbappé, from France, rose to stardom with incredible speed and finishing. 
+                    A World Cup champion at just 19, he represents the next generation of football greatness. 
+                    Learn more on 
+                    <a href="https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9" 
+                       class="font-normal underline text-blue-600 decoration-blue-600 decoration-2 underline-offset-4 
+                              hover:text-red-800 hover:no-underline">Wikipedia</a>.
+                </p>
+
+                <p class="text-gray-800 font-serif font-normal leading-relaxed text-lg lg:text-2xl 
+                          lg:leading-loose xl:leading-10 mb-0">
+                    Mbappé's leadership, intelligence, and agility make him one of the most valuable and exciting 
+                    players in the world. See more on 
+                    <a href="https://en.wikipedia.org/wiki/Kylian_Mbapp%C3%A9" 
+                       class="font-normal underline text-blue-600 decoration-blue-600 decoration-2 underline-offset-4 
+                              hover:text-red-800 hover:no-underline">Wikipedia</a>.
+                </p>
+
+            </div>
+
+
+            <!-- Player 5: Kevin De Bruyne -->
+            <div class="bg-emerald-100 p-6 rounded-lg">
+
+                <h2 class="text-black font-sans font-semibold tracking-tighter text-4xl md:text-5xl lg:text-6xl xl:text-7xl 
+                           leading-tight md:leading-snug lg:leading-none xl:leading-none mb-4 lg:mb-6 xl:mb-8">
+                    Kevin De Bruyne
+                </h2>
+
+                <img src="https://placehold.co/600x300" alt="Kevin De Bruyne" class="mb-6 lg:mb-8">
+
+                <p class="text-gray-800 font-serif font-normal leading-relaxed text-lg lg:text-2xl 
+                          lg:leading-loose xl:leading-10 mb-6 lg:mb-8">
+                    Kevin De Bruyne, the Belgian midfielder, is admired for his vision, passing, and intelligence. 
+                    As a Manchester City star, he defines world-class playmaking. 
+                    Learn more on 
+                    <a href="https://en.wikipedia.org/wiki/Kevin_De_Bruyne" 
+                       class="font-normal underline text-blue-600 decoration-blue-600 decoration-2 underline-offset-4 
+                              hover:text-red-800 hover:no-underline">Wikipedia</a>.
+                </p>
+
+                <p class="text-gray-800 font-serif font-normal leading-relaxed text-lg lg:text-2xl 
+                          lg:leading-loose xl:leading-10 mb-0">
+                    De Bruyne’s precision and creativity make him a cornerstone of modern football tactics. 
+                    His professionalism inspires teammates worldwide. 
+                    Learn more on 
+                    <a href="https://en.wikipedia.org/wiki/Kevin_De_Bruyne" 
+                       class="font-normal underline text-blue-600 decoration-blue-600 decoration-2 underline-offset-4 
+                              hover:text-red-800 hover:no-underline">Wikipedia</a>.
+                </p>
+
+            </div>
+
+
+            <!-- Player 6: Erling Haaland -->
+            <div class="bg-indigo-100 p-6 rounded-lg">
+
+                <h2 class="text-black font-sans font-semibold tracking-tighter text-4xl md:text-5xl lg:text-6xl xl:text-7xl 
+                           leading-tight md:leading-snug lg:leading-none xl:leading-none mb-4 lg:mb-6 xl:mb-8">
+                    Erling Haaland
+                </h2>
+
+                <img src="https://placehold.co/600x300" alt="Erling Haaland" class="mb-6 lg:mb-8">
+
+                <p class="text-gray-800 font-serif font-normal leading-relaxed text-lg lg:text-2xl 
+                          lg:leading-loose xl:leading-10 mb-6 lg:mb-8">
+                    Erling Haaland, the Norwegian striker, dominates with his strength, speed, and goal-scoring prowess. 
+                    A record-breaking forward for Manchester City. 
+                    Read more on 
+                    <a href="https://en.wikipedia.org/wiki/Erling_Haaland" 
+                       class="font-normal underline text-blue-600 decoration-blue-600 decoration-2 underline-offset-4 
+                              hover:text-red-800 hover:no-underline">Wikipedia</a>.
+                </p>
+
+                <p class="text-gray-800 font-serif font-normal leading-relaxed text-lg lg:text-2xl 
+                          lg:leading-loose xl:leading-10 mb-0">
+                    Haaland’s finishing instincts and composure make him one of football’s most feared strikers today. 
+                    Explore more on 
+                    <a href="https://en.wikipedia.org/wiki/Erling_Haaland" 
+                       class="font-normal underline text-blue-600 decoration-blue-600 decoration-2 underline-offset-4 
+                              hover:text-red-800 hover:no-underline">Wikipedia</a>.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+</html>
