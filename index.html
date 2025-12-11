@@ -18,7 +18,13 @@
     <!-- Font Awesome 6 icons. Delete if not using. -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"/>
+
+    
+    <!-- Styles for Cookie Consent Popup Message  -->
+    <link href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" rel="stylesheet">
     <style>
+        
         header .col-text h2 { line-height: 1.8 }
         .col-1 > h3 { line-height: 1.8 } 
     </style>
@@ -128,7 +134,7 @@
 
     </main>
 
-    <!-- footer -->
+    
  
 	<footer class="theme-dark text-center-desktop text-center-mobile">
 
@@ -153,6 +159,35 @@
 	</footer>
 
     <script src="https://lunevedy.com/assets/js/lunevedy.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-67M5VYFFY4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-67M5VYFFY4');
+</script>
+
+
+    <!-- JavaScript for Cookie Consent Popup Message -->
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+    window.cookieconsent.initialise({
+        "palette": {
+            "popup": {
+                "background": "#000"
+            },
+            "button": {
+                "background": "#f1d600"
+            }
+        },
+        "content": {
+            "href": "https:///EdsonSilva-dev.github.io/privacy.html"
+        }
+    });
+    </script>
 
 </body>
 </html>
